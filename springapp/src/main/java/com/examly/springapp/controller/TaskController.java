@@ -38,7 +38,7 @@ public class TaskController {
   }
 
   @GetMapping("/getTask")
-  public ResponseEntity<Task> getTaskById(@RequestParam Long id)
+  public ResponseEntity<Task> getTaskById(@RequestParam("taskId") Long id)
   {
     Task task = taskRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Task not found :"+id));
     return ResponseEntity.ok(task);
@@ -56,7 +56,7 @@ public class TaskController {
   }
 
   @GetMapping("/deleteTask")
-  public String deleteTaskById(@RequestParam Long id)
+  public String deleteTaskById(@RequestParam("taskId") Long id)
   {
     Task task = taskRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Task not found :"+id));
     taskRepository.delete(task);

@@ -24,6 +24,8 @@ public class Task {
   @Column(name = "taskStatus")
   private String taskStatus;
 
+  @Column(name == "houseNo")
+  private String houseNo;
 
   public Task(){
 
@@ -77,5 +79,13 @@ public class Task {
 
   public void setTaskStatus(String taskStatus) {
     this.taskStatus = taskStatus;
+  }
+
+  public String getHouseNo(){
+    return houseNo;
+  }
+
+  public void setHouseNo(String houseNo){
+    this.houseNo = houseNo;
   }
 }

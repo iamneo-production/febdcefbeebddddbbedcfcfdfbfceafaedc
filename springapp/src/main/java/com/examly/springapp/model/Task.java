@@ -24,7 +24,7 @@ public class Task {
   @Column(name = "taskStatus")
   private String taskStatus;
 
-  @Column(name == "houseNo")
+  @Column(name = "houseNo")
   private String houseNo;
 
   public Task(){
